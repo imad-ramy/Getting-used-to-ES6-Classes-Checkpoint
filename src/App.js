@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Humain from './humain'
+
+class Student extends Humain {
+ constructor(){
+    super()
+    this.name ="imad"
+    this.job = "developper"
+    this.skills =["js","react","php","SQL"]
+
+}
+}
+const me = new Student("Nedim", "Musicien", ["guitara", "kajon", "saxophone"]);
+console.log (me.getjob("web developper"));
+
+console.log(me);
+console.log(me.learnNewSkill("React"));
+console.log(me.forgetSkill("Reat"));
+console.log(me.leaveJob());
 
 function App() {
-  return (
+
+
+    {return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
   );
 }
-
+}
 export default App;
